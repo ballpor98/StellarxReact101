@@ -5,8 +5,8 @@ StellarSdk.Network.useTestNetwork();
 const sourceKeypair = StellarSdk.Keypair.fromSecret(
     'SCSY3LLR6GMUO5DPSW6FP2RENBN7TOTII55R4MV3Y7FC2JKQWCDV2HZU'
   );
-const asset = new stellar.Asset(
-    'KOUPON1', //Asset name
+const asset = new StellarSdk.Asset(
+    'USD', //Asset name
     'GDJ6DWZPKOXDFXZ6K6FIGIH4DADWA2VS4QLKFCOCRCZRYOI5KR2RAGHQ' //Issuer pubkey
   )
 
