@@ -1,8 +1,9 @@
 # Use node Stellar-SDK
 
 [Getting Started](#Getting-Started)  
-[Create Account](#create_account.js)  
-
+[Create Account](#Create-Account)  
+[Payment](#Payment)  
+[Change Trust](#Change-Trust)  
 
 ## Getting Started
 
@@ -21,7 +22,7 @@ GABEW3JTHAGINJEFB43HOWMSBVHW72FOUEP2NGVPLZUXEJODI3K7DCKT
 next step we will use others functions from stellar-SDK
 ____
 
-## create_account.js
+## Create Account
 
 Step
 
@@ -66,13 +67,7 @@ run();
 
 ____
 
-## Payment.js
-
-Step
-
-1. We need 1 stellar account to create another stellar account
-2. Generate new keypair(Identifier) for new account
-3. Create transaction that have create account operation
+## Payment
 
 code
 
@@ -81,29 +76,42 @@ const StellarSdk = require('stellar-sdk');
 const server = new StellarSdk.Server('https://horizon-testnet.stellar.org');
 StellarSdk.Network.useTestNetwork();
 
-const sourceKeypair = "";
-const destinationKeypair = "";
+const sourceKeypair = ""; //TODO
+const destinationKeypair = ""; //TODO
 
 const nativeAsset = StellarSdk.Asset.native();
+
 const customAsset = new stellar.Asset(
     'KOUPON1', //Asset name
     'GDJ6DWZPKOXDFXZ6K6FIGIH4DADWA2VS4QLKFCOCRCZRYOI5KR2RAGHQ' //Issuer public key
-)
-const amount = "";
+); //Custom asset example
+
 
 const run = async () => {
     let options = {
-        destination: destinationKeypair.publicKey(),
-        asset: nativeAsset,
-        amount: amount
+        destination: "TODO",
+        asset: "TODO",
+        amount: "TODO"
     };
+    let xdrOperation = StellarSdk.Operation.payment(options);
     //TODO
 }
 run();
 ```
 
-## example
+___
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+## Change Trust
+
+code
+
+```javascript
+const run = async () => {
+    let options = {
+        asset: "TODO"
+    };
+    let xdrOperation = StellarSdk.Operation.changeTrust(options);
+    //TODO
+}
+run();
+```
