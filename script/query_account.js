@@ -7,6 +7,7 @@ const sourceKeypair = StellarSdk.Keypair.fromSecret(
   );
 
 const run = async () => {
+  console.log(sourceKeypair.publicKey());
   let queryResult = await server
   .accounts()
   .accountId(sourceKeypair.publicKey())

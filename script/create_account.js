@@ -9,7 +9,9 @@ const destinationKeypair = StellarSdk.Keypair.random();
 const amount = "10";
 
 const run = async () => {
+    console.log(destinationKeypair.publicKey());
     console.log(destinationKeypair.secret());
+    console.log("\n---------------------------------------------------------\n");
     let sourceAccount = await server.loadAccount(sourceKeypair.publicKey());
     let transaction = new StellarSdk.TransactionBuilder(sourceAccount);
     let options = {
