@@ -1,4 +1,4 @@
-# Use node Stellar-SDK
+# node.js Stellar-SDK Guide
 
 [Getting Started](#Getting-Started)  
 [Create Account](#Create-Account)  
