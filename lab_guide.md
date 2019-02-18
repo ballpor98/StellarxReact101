@@ -34,7 +34,21 @@ Let's we explain about transaction parameters.
 
 ![alt text](https://raw.githubusercontent.com/ballpor98/StellarxReact101/dev/pic/Tx1.png)
 
+Let's build transaction  
+1. fill your public key in source account box.
+2. in Transaction Sequence Number click "Fetch next Sequence Number...". It will generate valid Sequence Number for you.
+3. you can leave base fee blank. It will calculate transaction fee after you finished.
+
 ![alt text](https://raw.githubusercontent.com/ballpor98/StellarxReact101/dev/pic/Tx2.png)
+
+Next We look to operation. We start at payment operation.
+
+
+1. Select operation type to payment. Then you will see fill box to fill parameters for payment operation.
+2. In destination, you must fill public key account that you want to payment to that account.(you can payment to yourself)
+3. select your asset for payment. For now we select native(XLM).
+4. Add you amount to pay but left your XLM in account more than [Minimum Account Balance](https://www.stellar.org/developers/guides/concepts/fees.html#minimum-account-balance).
+5. For source account is optional. Can leave it blank or read [this](https://www.stellar.org/developers/guides/concepts/operations.html#transactions-involving-multiple-accounts)
 
 ![alt text](https://raw.githubusercontent.com/ballpor98/StellarxReact101/dev/pic/Payment.png)
 
