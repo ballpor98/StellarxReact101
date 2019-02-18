@@ -1,5 +1,11 @@
 # Stellar Laboratory Guide
 
+[Getting Started](#Let's-Create-Stellar-account-on-testnet)  
+[Build Transaction](#Build-Transaction)  
+[Sign & Submit Transaction](#Sign-&-Submit-Transaction)  
+[Create-account](#Create-account)  
+[Create New Asset](#Create-New-Asset)  
+
 ## Let's Create Stellar account on testnet
 
 1. Go to <https://www.stellar.org/laboratory/#account-creator?network=test>
