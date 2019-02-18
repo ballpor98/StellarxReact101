@@ -2,6 +2,10 @@
 
 ## Let's Create Stellar account on testnet
 
+![alt text](https://raw.githubusercontent.com/ballpor98/StellarxReact101/dev/pic/Create_Account_diagram.png)
+
+Create account sequence diagram
+
 1. Go to <https://www.stellar.org/laboratory/#account-creator?network=test>
 2. Click Generate keypair button.
 3. Now, We have public key and secret key. Public key likes username and Secret key likes password. So you need to keep your secret key secret (- -")
@@ -9,6 +13,7 @@
 5. Hooray! We got a account with 10,000 lumens(XLM).
 
 ![alt text](https://raw.githubusercontent.com/ballpor98/StellarxReact101/dev/pic/keypairgen.png)
+
 ___
 
 ## Build Transaction
