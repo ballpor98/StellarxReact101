@@ -52,23 +52,33 @@ Next We look to operation. We start at payment operation.
 
 ![alt text](https://raw.githubusercontent.com/ballpor98/StellarxReact101/dev/pic/Payment.png)
 
+6. Click Sign in Trasaction Signer  
+
+![alt text](https://raw.githubusercontent.com/ballpor98/StellarxReact101/dev/pic/Tx3.png)
+
 ___
 
 ## Sign & Submit Transaction
 
+1. Fill serect key in Add Signer.
+2. Click Submit to Post Transaction endpoint.
+
+
 ![alt text](https://raw.githubusercontent.com/ballpor98/StellarxReact101/dev/pic/SubmitTx1.png)
 
+Click Submit
 ![alt text](https://raw.githubusercontent.com/ballpor98/StellarxReact101/dev/pic/SubmitTx2.png)
 
+Now, you must see result in json format.
 ![alt text](https://raw.githubusercontent.com/ballpor98/StellarxReact101/dev/pic/SubmitTx3.png)
 
 ___
 
 ## Create account
 
-![alt text](https://raw.githubusercontent.com/ballpor98/StellarxReact101/dev/pic/Create_Account_diagram.png)
-
 Create account sequence diagram
+
+![alt text](https://raw.githubusercontent.com/ballpor98/StellarxReact101/dev/pic/Create_Account_diagram.png)
 
 ![alt text](https://raw.githubusercontent.com/ballpor98/StellarxReact101/dev/pic/Create_account.png)
 
@@ -78,9 +88,12 @@ ___
 
 ![alt text](https://raw.githubusercontent.com/ballpor98/StellarxReact101/dev/pic/Create_New_Asset.png)
 
+[Asset Description](https://www.stellar.org/developers/guides/concepts/assets.html)
+
 ![alt text](https://raw.githubusercontent.com/ballpor98/StellarxReact101/dev/pic/ChangeTrust.png)
 
 ### account
 
 Public Key GBTCC44KSSKW7PO2Q7ICFMTWI6QWRPEZEZN3PBOTW6NNAJFJBDEG54QY  
-Secret Key SBJ7J6UH5GESUVFMWVVAZSDWPMQFD6C6YUOHNMW3T42HHRR4HSWPGCK7
+Secret Key SBJ7J6UH5GESUVFMWVVAZSDWPMQFD6C6YUOHNMW3T42HHRR4HSWPGCK7  
+[testnet imformations](https://www.stellar.org/developers/guides/concepts/test-net.html#best-practices-for-using-testnet)
