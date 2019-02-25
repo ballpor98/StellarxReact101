@@ -16,6 +16,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Button from '@material-ui/core/Button';
 
 import StellarSdk from 'stellar-sdk';
+import arrayC from "module/array_pubkey.json";
 
 const server = new StellarSdk.Server('https://horizon-testnet.stellar.org');
 StellarSdk.Network.useTestNetwork();
@@ -34,13 +35,39 @@ class votePage extends React.Component {
   handleChange = (e) => {
     this.setState({value: e.target.value});
   }
-  handlerButton = () =>{
-    // console.log(this.state.secretKey);
-    // console.log(this.state.value);
+  handlerButton = async() =>{
+    const secretKey = this.state.secretKey;
+    const coach = this.state.value;
+    let coachPublicKey = "";
+    // console.log(arrayC);
     //TODO
+    arrayC.forEach((c)=>{
+      if(c.name===coach)
+      coachPublicKey = c.publicKey;
+    });
+    console.log(coachPublicKey);
+    const sourceKeypair = StellarSdk.Keypair.fromSecret(secretKey);
+    const asset = new StellarSdk.Asset(
+      'Acoin',
+      'GBTCC44KSSKW7PO2Q7ICFMTWI6QWRPEZEZN3PBOTW6NNAJFJBDEG54QY'
+    )
+    let sourceAccount = await server.loadAccount(sourceKeypair.publicKey());
+    let transaction = new StellarSdk.TransactionBuilder(sourceAccount);
+    let paymentOptions = {
+      destination: coachPublicKey,
+      asset: asset,
+      amount: "1"
+    };
+    let paymentOperation = StellarSdk.Operation.payment(paymentOptions);
+    transaction = transaction.addOperation(paymentOperation);
+    transaction = transaction.build();
+    transaction.sign(sourceKeypair);
+    let transactionResult = await server.submitTransaction(transaction);
+    console.log(JSON.stringify(transactionResult, null, 2));
+    //TODO
+    
   }
   render() {
-    const secretKey = this.state.secretKey;
     return (
       <div className="content">
         <Row>
