@@ -4,7 +4,7 @@ import votePage from "views/votePage/votePage.jsx";
 
 var dashRoutes = [
   {
-    path: "/dashboard",
+    path: "/StellarxReact101",
     name: "Dashboard",
     icon: "nc-icon nc-chart-bar-32",
     component: Dashboard
@@ -21,6 +21,6 @@ var dashRoutes = [
     icon: "nc-icon nc-check-2",
     component: votePage
   },
-  { redirect: true, path: "/", pathTo: "/dashboard", name: "Dashboard" }
+  { redirect: true, path: "/", pathTo: "/StellarxReact101", name: "Dashboard" }
 ];
 export default dashRoutes;
