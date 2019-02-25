@@ -20,15 +20,15 @@ self.__precacheManifest = [
     "url": "/StellarxReact101/static/js/runtime~main.fd3026e0.js"
   },
   {
-    "revision": "e1117e55537286852f80",
-    "url": "/StellarxReact101/static/js/main.e1117e55.chunk.js"
+    "revision": "6c645b8102d079e74fc2",
+    "url": "/StellarxReact101/static/js/main.6c645b81.chunk.js"
   },
   {
     "revision": "7a036bf98ee9b63dbf5e",
     "url": "/StellarxReact101/static/js/1.7a036bf9.chunk.js"
   },
   {
-    "revision": "e1117e55537286852f80",
+    "revision": "6c645b8102d079e74fc2",
     "url": "/StellarxReact101/static/css/main.fe8f9ee4.chunk.css"
   },
   {
@@ -36,7 +36,7 @@ self.__precacheManifest = [
     "url": "/StellarxReact101/static/css/1.94db538b.chunk.css"
   },
   {
-    "revision": "cfb55cb366a96fbc461c4b422f0eb87e",
+    "revision": "264ed92c1226b4d4d6c087319b8ff4b7",
     "url": "/StellarxReact101/index.html"
   }
 ];
