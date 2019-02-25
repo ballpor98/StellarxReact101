@@ -195,7 +195,7 @@ class Dashboard extends React.Component {
           <Col xs={12}>
             <Card>
               <CardHeader>
-                <CardTitle>BNK48 Voting Chart</CardTitle>
+                <CardTitle>Voting Chart</CardTitle>
               </CardHeader>
               <CardBody>
                 <HorizontalBar

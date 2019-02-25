@@ -6,19 +6,19 @@ var dashRoutes = [
   {
     path: "/dashboard",
     name: "Dashboard",
-    icon: "nc-icon nc-bank",
+    icon: "nc-icon nc-chart-bar-32",
     component: Dashboard
   },
   {
     path: "/createAccountPage",
     name: "Create Account Page",
-    icon: "nc-icon nc-diamond",
+    icon: "nc-icon nc-simple-add",
     component: createAccountPage
   },
   {
     path: "/votePage",
     name: "Vote Page",
-    icon: "nc-icon nc-tile-56",
+    icon: "nc-icon nc-check-2",
     component: votePage
   },
   { redirect: true, path: "/", pathTo: "/dashboard", name: "Dashboard" }
