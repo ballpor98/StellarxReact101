@@ -102,7 +102,7 @@ const createChart = (data)=>{
 
         xAxes: [
           {
-            barPercentage: 1.6,
+            barPercentage: 0.8,
             gridLines: {
               drawBorder: false,
               color: "rgba(255,255,255,0.1)",
@@ -111,7 +111,7 @@ const createChart = (data)=>{
             },
             ticks: {
               beginAtZero:true,
-              padding: 20,
+              padding: 10,
               fontColor: "#9f9f9f"
             }
           }
@@ -202,7 +202,7 @@ class Dashboard extends React.Component {
                   data={chart.data}
                   options={chart.options}
                   width={400}
-                  height={400}
+                  height={200}
                 />
               </CardBody>
               <CardFooter>
