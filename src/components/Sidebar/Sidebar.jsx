@@ -35,10 +35,10 @@ class Sidebar extends React.Component {
       <div className="sidebar" data-color={this.props.bgColor} data-active-color={this.props.activeColor}>
         <div className="logo">
           <a
-            href="https://bnk48voting.herokuapp.com"
+            href="https://ballpor98.github.io/StellarxReact101/"
             className="simple-text logo-normal"
           >
-            BNK48 Voting
+            Stellar Voting
           </a>
         </div>
         <div className="sidebar-wrapper" ref="sidebar">
