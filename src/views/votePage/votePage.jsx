@@ -13,6 +13,8 @@ import FormLabel from '@material-ui/core/FormLabel';
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Button from '@material-ui/core/Button';
+
 import StellarSdk from 'stellar-sdk';
 
 const server = new StellarSdk.Server('https://horizon-testnet.stellar.org');
@@ -27,12 +29,15 @@ class votePage extends React.Component {
     }
   }
   textHandler = (e) => {
-    console.log(e.target.value);
     this.setState({secretKey: e.target.value});
   }
   handleChange = (e) => {
     this.setState({value: e.target.value});
-    console.log(this.state.value);
+  }
+  handlerButton = () =>{
+    // console.log(this.state.secretKey);
+    // console.log(this.state.value);
+    //TODO
   }
   render() {
     const secretKey = this.state.secretKey;
@@ -63,14 +68,20 @@ class votePage extends React.Component {
           <RadioGroup
             aria-label="Coach"
             name="Coach1"
-            onChange={(e) => this.textHandler(e)}
+            onChange={(e) => this.handleChange(e)}
           >
             <FormControlLabel value="Kong" control={<Radio />} label="Kong" />
             <FormControlLabel value="Kim" control={<Radio />} label="Kim" />
             <FormControlLabel value="Joey" control={<Radio />} label="Joey" />
             <FormControlLabel value="Pop" control={<Radio />} label="Pop" />
           </RadioGroup>
+          <Button disabled={false} variant="contained"
+                onClick={() => this.handlerButton()}
+              >
+                Vote
+              </Button>
         </FormControl>
+        
               </CardBody>
             </Card>
           </Col>
