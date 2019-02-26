@@ -27,6 +27,7 @@ class votePage extends React.Component {
     this.state = {
       secretKey:"",
       value:"",
+      headerText:"Vote page",
       waiting:false
 
     }
@@ -38,7 +39,10 @@ class votePage extends React.Component {
     this.setState({value: e.target.value});
   }
   handleButton = async() =>{
-    this.setState({waiting:true});
+    this.setState({
+      waiting:true,
+      headerText:"Please wait"
+    });
     const secretKey = this.state.secretKey;
     const coach = this.state.value;
     //TODO
@@ -70,10 +74,14 @@ class votePage extends React.Component {
     let transactionResult = await server.submitTransaction(transaction);
     console.log(JSON.stringify(transactionResult, null, 2));
     //TODO
-    this.setState({waiting:true});
+    this.setState({
+      waiting:false,
+      headerText:"Finish"
+    });
     
   }
   render() {
+    const headerText = this.state.headerText;
     const waiting = this.state.waiting;
     return (
       <div className="content">
@@ -81,7 +89,7 @@ class votePage extends React.Component {
           <Col xs={12}>
             <Card className="card-plain">
               <CardHeader>
-                <CardTitle tag="h4">Vote page</CardTitle>
+                <CardTitle tag="h4">{headerText}</CardTitle>
               </CardHeader>
               <CardBody>
               <FormInputs
