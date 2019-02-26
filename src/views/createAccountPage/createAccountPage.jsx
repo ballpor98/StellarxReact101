@@ -30,53 +30,7 @@ class createAccountPage extends React.Component {
       headerText:"Please wait"
     });
     //TODO
-    const sourceKeypair = StellarSdk.Keypair.fromSecret(
-      'SCSY3LLR6GMUO5DPSW6FP2RENBN7TOTII55R4MV3Y7FC2JKQWCDV2HZU'
-    );
-    const asset = new StellarSdk.Asset(
-      'Acoin', //Asset name
-      sourceKeypair.publicKey() //Issuer pubkey
-    )
     const newKeypair = StellarSdk.Keypair.random();
-    let sourceAccount = await server.loadAccount(sourceKeypair.publicKey());
-    let transaction = new StellarSdk.TransactionBuilder(sourceAccount);
-
-    let createAccountOptions = {
-        destination: newKeypair.publicKey(),
-        startingBalance: "3"
-    };
-    let createAccountOperation = StellarSdk.Operation.createAccount(createAccountOptions);
-    transaction = transaction.addOperation(createAccountOperation);
-    transaction = transaction.build();
-    transaction.sign(sourceKeypair);
-    let transactionResult = await server.submitTransaction(transaction);
-    console.log(JSON.stringify(transactionResult, null, 2));
-    // -----------------------------------------------------------------------
-
-    let transaction2 = new StellarSdk.TransactionBuilder(sourceAccount);
-
-    let changeTrustOptions = {
-      asset: asset,
-      source: newKeypair.publicKey()
-    };
-    let paymentOptions = {
-      destination: newKeypair.publicKey(),
-      asset: asset,
-      amount: "1"
-    };
-
-    let changeTrustOperation = StellarSdk.Operation.changeTrust(changeTrustOptions);
-    let paymentOperation = StellarSdk.Operation.payment(paymentOptions);
-
-    transaction2 = transaction2.addOperation(changeTrustOperation);
-    transaction2 = transaction2.addOperation(paymentOperation);
-
-    transaction2 = transaction2.build();
-    transaction2.sign(sourceKeypair);
-    transaction2.sign(newKeypair);
-
-    let transactionResult2 = await server.submitTransaction(transaction2);
-    console.log(JSON.stringify(transactionResult2, null, 2));
     //TODO
     this.setState(
       {

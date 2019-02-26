@@ -45,34 +45,14 @@ class votePage extends React.Component {
     });
     const secretKey = this.state.secretKey;
     const coach = this.state.value;
-    //TODO
+
     let coachPublicKey = "";
     arrayC.forEach((c)=>{
       if(c.name===coach)
       coachPublicKey = c.publicKey;
     });
     console.log(coachPublicKey);
-    const sourceKeypair = StellarSdk.Keypair.fromSecret(secretKey);
-    const assetKeypair = StellarSdk.Keypair.fromSecret(
-      'SCSY3LLR6GMUO5DPSW6FP2RENBN7TOTII55R4MV3Y7FC2JKQWCDV2HZU'
-    );
-    const asset = new StellarSdk.Asset(
-      'Acoin',
-      assetKeypair.publicKey()
-    )
-    let sourceAccount = await server.loadAccount(sourceKeypair.publicKey());
-    let transaction = new StellarSdk.TransactionBuilder(sourceAccount);
-    let paymentOptions = {
-      destination: coachPublicKey,
-      asset: asset,
-      amount: "1"
-    };
-    let paymentOperation = StellarSdk.Operation.payment(paymentOptions);
-    transaction = transaction.addOperation(paymentOperation);
-    transaction = transaction.build();
-    transaction.sign(sourceKeypair);
-    let transactionResult = await server.submitTransaction(transaction);
-    console.log(JSON.stringify(transactionResult, null, 2));
+    //TODO
     //TODO
     this.setState({
       waiting:false,
