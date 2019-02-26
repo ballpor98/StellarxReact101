@@ -43,7 +43,7 @@ class createAccountPage extends React.Component {
 
     let createAccountOptions = {
         destination: newKeypair.publicKey(),
-        startingBalance: "2"
+        startingBalance: "3"
     };
     let createAccountOperation = StellarSdk.Operation.createAccount(createAccountOptions);
     transaction = transaction.addOperation(createAccountOperation);

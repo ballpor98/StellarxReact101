@@ -49,9 +49,12 @@ class votePage extends React.Component {
     });
     console.log(coachPublicKey);
     const sourceKeypair = StellarSdk.Keypair.fromSecret(secretKey);
+    const assetKeypair = StellarSdk.Keypair.fromSecret(
+      'SCSY3LLR6GMUO5DPSW6FP2RENBN7TOTII55R4MV3Y7FC2JKQWCDV2HZU'
+    );
     const asset = new StellarSdk.Asset(
       'Acoin',
-      'GBTCC44KSSKW7PO2Q7ICFMTWI6QWRPEZEZN3PBOTW6NNAJFJBDEG54QY'
+      assetKeypair.publicKey()
     )
     let sourceAccount = await server.loadAccount(sourceKeypair.publicKey());
     let transaction = new StellarSdk.TransactionBuilder(sourceAccount);

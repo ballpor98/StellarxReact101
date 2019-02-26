@@ -21,7 +21,7 @@ const run = async() =>{
   arrayS.forEach((bnk) => {
     const options = {
       destination: stellar.Keypair.fromSecret(bnk.secret).publicKey(),
-      startingBalance: '2'
+      startingBalance: '3'
     };
     const xdrOperation = stellar.Operation.createAccount(options);
     transaction = transaction.addOperation(xdrOperation);
