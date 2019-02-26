@@ -1,4 +1,4 @@
-# Stellar React tutorial guild
+# Stellar React tutorial guide
 
 ## Attention
 
