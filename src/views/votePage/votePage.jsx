@@ -26,7 +26,9 @@ class votePage extends React.Component {
     super(props);
     this.state = {
       secretKey:"",
-      value:""
+      value:"",
+      waiting:false
+
     }
   }
   textHandler = (e) => {
@@ -35,12 +37,12 @@ class votePage extends React.Component {
   handleChange = (e) => {
     this.setState({value: e.target.value});
   }
-  handlerButton = async() =>{
+  handleButton = async() =>{
+    this.setState({waiting:true});
     const secretKey = this.state.secretKey;
     const coach = this.state.value;
-    let coachPublicKey = "";
-    // console.log(arrayC);
     //TODO
+    let coachPublicKey = "";
     arrayC.forEach((c)=>{
       if(c.name===coach)
       coachPublicKey = c.publicKey;
@@ -65,9 +67,11 @@ class votePage extends React.Component {
     let transactionResult = await server.submitTransaction(transaction);
     console.log(JSON.stringify(transactionResult, null, 2));
     //TODO
+    this.setState({waiting:true});
     
   }
   render() {
+    const waiting = this.state.waiting;
     return (
       <div className="content">
         <Row>
@@ -102,8 +106,8 @@ class votePage extends React.Component {
             <FormControlLabel value="Joey" control={<Radio />} label="Joey" />
             <FormControlLabel value="Pop" control={<Radio />} label="Pop" />
           </RadioGroup>
-          <Button disabled={false} variant="contained"
-                onClick={() => this.handlerButton()}
+          <Button disabled={waiting} variant="contained"
+                onClick={() => this.handleButton()}
               >
                 Vote
               </Button>
