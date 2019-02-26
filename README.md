@@ -7,3 +7,9 @@ Materials and dependencies for Stellar X React course
 3. [Node script](https://github.com/ballpor98/StellarxReact101/blob/master/script/script_guide.md)
 4. [Demo web](https://ballpor98.github.io/StellarxReact101)
 5. [Web guide](https://github.com/ballpor98/StellarxReact101/blob/master/web_guide.md)
+
+## Getting start
+
+1. Install [node](https://nodejs.org/en/)
+2. clone this project ``` git clone https://github.com/ballpor98/StellarxReact101.git```
+3. ```npm install```
