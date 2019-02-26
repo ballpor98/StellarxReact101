@@ -6,4 +6,4 @@ Materials and dependencies for Stellar X React course
 2. [Stellar laboratory](https://github.com/ballpor98/StellarxReact101/blob/master/lab_guide.md)
 3. [Node script](https://github.com/ballpor98/StellarxReact101/blob/master/script/script_guide.md)
 4. [Demo web](https://ballpor98.github.io/StellarxReact101)
-5. [Web guild](https://github.com/ballpor98/StellarxReact101/blob/master/web_guide.md)
+5. [Web guide](https://github.com/ballpor98/StellarxReact101/blob/master/web_guide.md)
