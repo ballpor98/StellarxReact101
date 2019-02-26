@@ -1,4 +1,4 @@
-# Stellar React tutorial guild
+# Stellar React tutorial guide
 
 ## Attention
 
@@ -10,7 +10,7 @@ Many line of code are hard code. I'm sorry about that.
 We have demo [website](https://ballpor98.github.io/StellarxReact101/).Use this website to referent you work.
 
 ## Thing to do and where
-In ```src/module/array_pubkey.json``` you need to change publicKey and secret to your own. And that account should have more than 3 XLM and trust your custom asset.  
+In ```src/module/array_pubkey.json``` you need to change publicKey and secret to your own. And that account should have more than 3 XLM and trust your custom asset. [About Minimum Account Balance](https://www.stellar.org/developers/guides/concepts/fees.html#minimum-account-balance)  
 
 In ```src/views/createAccountPage/createAccountPage.jsx``` in handler function(line 27). You need to handle button action. Create new account trust your custom asset and payment new asset to that account.  
 
