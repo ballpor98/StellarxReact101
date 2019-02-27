@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/StellarxReact101/precache-manifest.a37a562a7666b0257cba95c6cc90b86d.js"
+  "/StellarxReact101/precache-manifest.72cbe0c03002b50c363da59276c77d6c.js"
 );
 
 workbox.clientsClaim();
