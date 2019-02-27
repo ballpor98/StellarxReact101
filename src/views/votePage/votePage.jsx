@@ -54,7 +54,7 @@ class votePage extends React.Component {
     console.log(coachPublicKey);
     const sourceKeypair = StellarSdk.Keypair.fromSecret(secretKey);
     const assetKeypair = StellarSdk.Keypair.fromSecret(
-      'SCSY3LLR6GMUO5DPSW6FP2RENBN7TOTII55R4MV3Y7FC2JKQWCDV2HZU'
+      'SDV2VADWNVXN27NHNEGV2TJWHWVVWP6SPL5JCL7I3GVDN3JKJ2SZZU7Q' //edit
     );
     const asset = new StellarSdk.Asset(
       'Acoin',
