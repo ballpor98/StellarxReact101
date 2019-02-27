@@ -1,18 +1,25 @@
 # Stellar React tutorial guide
 
-## Attention
+## Note
 
-This tutorial isn't a best practice to build Stellar application. And It has many security issue. So, We use this tutorial to learn concept to call stellar horizon and handle responce.  
-Many line of code are hard code. I'm sorry about that.
+This tutorial is not the best practice to build Stellar application (many securities concerns). We use this tutorial solely to learn concept to call stellar horizon and handle responses.  
+Lots line of code in this tutorial are hard coded.
 
 ## Demo
 
-We have demo [website](https://ballpor98.github.io/StellarxReact101/).Use this website to referent you work.
+Use this [demo website](https://ballpor98.github.io/StellarxReact101/) to monitor your work.
 
-## Thing to do and where
-In ```src/module/array_pubkey.json``` you need to change publicKey and secret to your own. And that account should have more than 3 XLM and trust your custom asset. [About Minimum Account Balance](https://www.stellar.org/developers/guides/concepts/fees.html#minimum-account-balance)  
+## TODO list and where to look at
 
-In ```src/views/createAccountPage/createAccountPage.jsx``` in handler function(line 27). You need to handle button action. Create new account trust your custom asset and payment new asset to that account.  
+1. In `src/module/array_pubkey.json`, you need to change public key and secret key to yours. Moreover, your account should have more than 3 XLM and trust your custom asset. [About Minimum Account Balance](https://www.stellar.org/developers/guides/concepts/fees.html#minimum-account-balance)
 
-In ```src/views/votePage/votePage.jsx``` in handleButton function(line 41). You need to handle button action. Payment your custom asset to account. In line 95 I'm hard code name of choice you freely to edit.
+2. In `src/views/createAccountPage/createAccountPage.jsx`, in handler function(line 27). You need to handle a button action.
 
+   1. Create new account
+   2. Trust your custom asset
+   3. Do new asset payment to that account.
+
+3. In `src/views/votePage/votePage.jsx` in handleButton function(line 41). You need to handle a button action.
+
+   1. Do your custom asset payment to account.
+   2. In line 95, I did hard code the choices of name. Feel free to edit them :).
